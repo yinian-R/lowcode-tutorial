@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.lowcodesample.meta.mapper.SchemaEntityMapper">
+    
+    <resultMap id="entityMap" type="com.example.lowcodesample.core.lowcode.Entity">
+        <id property="id" column="id"/>
+        <result property="name" column="name"/>
+        <result property="tableName" column="table_name"/>
+        <result property="description" column="description"/>
+        <collection property="properties" column="id" select="com.example.lowcodesample.meta.mapper.SchemaPropertiesMapper.findList"/>
+        <collection property="indexes" column="id" select="com.example.lowcodesample.meta.mapper.SchemaIndexesMapper.findList"/>
+    </resultMap>
+    
+    <select id="findList" resultMap="entityMap">
+        select *
+        from schema_entity
+    </select>
+    
+    <select id="find" resultMap="entityMap">
+        select *
+        from schema_entity
+        where id = #{id}
+    </select>
+    
+    <select id="findByName" resultMap="entityMap">
+        select *
+        from schema_entity
+        where name = #{name}
+    </select>
+
+</mapper>

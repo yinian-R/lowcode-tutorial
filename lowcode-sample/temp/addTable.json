@@ -1,0 +1,158 @@
+[
+  {
+    "AA": "/proxy/nasl-storage/api/storage/batchAction  建数据库实体",
+    "action": "create",
+    "path": "app.dataSources[name=defaultDS].entities[0]",
+    "object": {
+      "concept": "Entity",
+      "name": "Entity1",
+      "uuid": "c1e8342e668945f183776f44d1d297e8",
+      "tableName": "Entity1",
+      "origin": "ide",
+      "properties": [
+        {
+          "concept": "EntityProperty",
+          "name": "id",
+          "uuid": "b6f0ba5f95c74d6fb617c18b8bd2b326",
+          "label": "主键",
+          "description": "主键",
+          "typeAnnotation": {
+            "concept": "TypeAnnotation",
+            "name": "",
+            "typeKind": "primitive",
+            "typeNamespace": "nasl.core",
+            "typeName": "Long",
+            "typeArguments": null,
+            "returnType": null,
+            "properties": null
+          },
+          "required": true,
+          "primaryKey": true,
+          "display": {
+            "inTable": false,
+            "inFilter": false,
+            "inForm": false,
+            "inDetail": false
+          },
+          "rules": [],
+          "generationRule": "auto",
+          "sequence": "Entity18823693319",
+          "isLeaf": true
+        },
+        {
+          "concept": "EntityProperty",
+          "name": "createdTime",
+          "uuid": "5e645e173edb4ae29dbf3e0e37c293f0",
+          "label": "创建时间",
+          "description": "创建时间",
+          "typeAnnotation": {
+            "concept": "TypeAnnotation",
+            "name": "",
+            "typeKind": "primitive",
+            "typeNamespace": "nasl.core",
+            "typeName": "DateTime",
+            "typeArguments": null,
+            "returnType": null,
+            "properties": null
+          },
+          "display": {
+            "inTable": true,
+            "inFilter": false,
+            "inForm": false,
+            "inDetail": false
+          },
+          "rules": [],
+          "generationRule": "auto",
+          "isLeaf": true
+        },
+        {
+          "concept": "EntityProperty",
+          "name": "updatedTime",
+          "uuid": "7e54aa95a01a4ffc9616a71e80b4fd93",
+          "label": "更新时间",
+          "description": "更新时间",
+          "typeAnnotation": {
+            "concept": "TypeAnnotation",
+            "name": "",
+            "typeKind": "primitive",
+            "typeNamespace": "nasl.core",
+            "typeName": "DateTime",
+            "typeArguments": null,
+            "returnType": null,
+            "properties": null
+          },
+          "display": {
+            "inTable": true,
+            "inFilter": false,
+            "inForm": false,
+            "inDetail": false
+          },
+          "rules": [],
+          "generationRule": "auto",
+          "isLeaf": true
+        },
+        {
+          "concept": "EntityProperty",
+          "name": "createdBy",
+          "uuid": "f788a95303494bafbae5ec827ee17d73",
+          "label": "创建者",
+          "description": "创建者",
+          "typeAnnotation": {
+            "concept": "TypeAnnotation",
+            "name": "",
+            "typeKind": "primitive",
+            "typeNamespace": "nasl.core",
+            "typeName": "String",
+            "typeArguments": null,
+            "returnType": null,
+            "properties": null
+          },
+          "display": {
+            "inTable": false,
+            "inFilter": false,
+            "inForm": false,
+            "inDetail": false
+          },
+          "rules": [],
+          "generationRule": "auto",
+          "isLeaf": true
+        },
+        {
+          "concept": "EntityProperty",
+          "name": "updatedBy",
+          "uuid": "19facd145adf4f4597de704b5233f54a",
+          "label": "更新者",
+          "description": "更新者",
+          "typeAnnotation": {
+            "concept": "TypeAnnotation",
+            "name": "",
+            "typeKind": "primitive",
+            "typeNamespace": "nasl.core",
+            "typeName": "String",
+            "typeArguments": null,
+            "returnType": null,
+            "properties": null
+          },
+          "display": {
+            "inTable": false,
+            "inFilter": false,
+            "inForm": false,
+            "inDetail": false
+          },
+          "rules": [],
+          "generationRule": "auto",
+          "isLeaf": true
+        }
+      ],
+      "indexes": [
+        {
+          "concept": "EntityIndex",
+          "name": "entityIndex1",
+          "propertyNames": [
+            "createdTime"
+          ]
+        }
+      ]
+    }
+  }
+]

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.lowcodesample.meta.mapper.SchemaPropertiesMapper">
+    
+    <resultMap id="propertiesMap" type="com.example.lowcodesample.core.lowcode.Entity$Properties">
+        <id property="id" column="id"/>
+        <result property="name" column="name"/>
+        <result property="label" column="label"/>
+        <result property="description" column="description"/>
+        <result property="defaultValue" column="default_value"/>
+        <result property="required" column="required"/>
+        <result property="primaryKey" column="primary_key"/>
+        <result property="sequence" column="sequence"/>
+        <result property="relationEntity" column="relation_entity"/>
+        <result property="relationProperty" column="relation_property"/>
+        <result property="generationRule" column="generation_rule"/>
+        <association property="display" javaType="com.example.lowcodesample.core.lowcode.Entity$Display">
+            <result property="inTable" column="in_table"/>
+            <result property="inFilter" column="in_filter"/>
+            <result property="inForm" column="in_form"/>
+            <result property="inDetail" column="in_detail"/>
+        </association>
+        <association property="typeAnnotation" javaType="com.example.lowcodesample.core.lowcode.Entity$TypeAnnotation">
+            <result property="typeKind" column="type_kind"/>
+            <result property="typeName" column="type_name"/>
+            <result property="typeRuleMap" column="type_rule_map" typeHandler="com.baomidou.mybatisplus.extension.handlers.JacksonTypeHandler"/>
+        </association>
+    </resultMap>
+    
+    <select id="findList" resultMap="propertiesMap">
+        select *
+        from schema_properties
+        where relation_entity_id = #{relationEntityId}
+        order by sequence
+    </select>
+    
+</mapper>

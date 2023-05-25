@@ -1,0 +1,1625 @@
+
+{
+  "AA": "/api/v1/app/deployments/entities?appId=7b149731-7b9b-4570-9e16-3dc263da6ec3",
+  "code": 200,
+  "msg": "调用成功",
+  "result": [
+    {
+      "concept": "Entity",
+      "name": "LCAPRolePerMapping",
+      "uuid": "c69c1612b5fd43aa977a0fe894603b0a",
+      "tableName": "LCAPRolePerMapping_7b1497",
+      "description": "角色权限关联实体。新增一个角色系统会默认生成一个权限和角色权限关联数据。",
+      "origin": "ide",
+      "properties": [
+        {
+          "concept": "EntityProperty",
+          "name": "id",
+          "columnName": "",
+          "label": "主键",
+          "description": "主键",
+          "typeAnnotation": {
+            "concept": "TypeAnnotation",
+            "typeKind": "primitive",
+            "typeNamespace": "nasl.core",
+            "typeName": "Long"
+          },
+          "required": false,
+          "defaultValue": null,
+          "primaryKey": true,
+          "relationNamespace": "app.dataSources.defaultDS.entities",
+          "relationEntity": "",
+          "relationProperty": "",
+          "deleteRule": "",
+          "deletable": false,
+          "display": {
+            "inTable": false,
+            "inFilter": false,
+            "inForm": false,
+            "inDetail": false
+          },
+          "rules": [],
+          "generationRule": "auto",
+          "sequence": null,
+          "uuid": "d75d59db61af44dab528cdd39b34ba4d"
+        },
+        {
+          "concept": "EntityProperty",
+          "name": "createdTime",
+          "columnName": "",
+          "label": "创建时间",
+          "description": "创建时间",
+          "typeAnnotation": {
+            "concept": "TypeAnnotation",
+            "typeKind": "primitive",
+            "typeNamespace": "nasl.core",
+            "typeName": "DateTime"
+          },
+          "required": false,
+          "defaultValue": null,
+          "primaryKey": false,
+          "relationNamespace": "app.dataSources.defaultDS.entities",
+          "relationEntity": "",
+          "relationProperty": "",
+          "deleteRule": "",
+          "deletable": false,
+          "display": {
+            "inTable": false,
+            "inFilter": false,
+            "inForm": false,
+            "inDetail": false
+          },
+          "rules": [],
+          "generationRule": "auto",
+          "sequence": null,
+          "uuid": "8fa4d85dc538484690d0107e4526f554"
+        },
+        {
+          "concept": "EntityProperty",
+          "name": "updatedTime",
+          "columnName": "",
+          "label": "更新时间",
+          "description": "更新时间",
+          "typeAnnotation": {
+            "concept": "TypeAnnotation",
+            "typeKind": "primitive",
+            "typeNamespace": "nasl.core",
+            "typeName": "DateTime"
+          },
+          "required": false,
+          "defaultValue": null,
+          "primaryKey": false,
+          "relationNamespace": "app.dataSources.defaultDS.entities",
+          "relationEntity": "",
+          "relationProperty": "",
+          "deleteRule": "",
+          "deletable": false,
+          "display": {
+            "inTable": false,
+            "inFilter": false,
+            "inForm": false,
+            "inDetail": false
+          },
+          "rules": [],
+          "generationRule": "auto",
+          "sequence": null,
+          "uuid": "37fc21abd9b840afb6ed4847649cf8bb"
+        },
+        {
+          "concept": "EntityProperty",
+          "name": "createdBy",
+          "columnName": "",
+          "label": "创建者",
+          "description": "创建者",
+          "typeAnnotation": {
+            "concept": "TypeAnnotation",
+            "typeKind": "primitive",
+            "typeNamespace": "nasl.core",
+            "typeName": "String"
+          },
+          "required": false,
+          "defaultValue": null,
+          "primaryKey": false,
+          "relationNamespace": "app.dataSources.defaultDS.entities",
+          "relationEntity": "",
+          "relationProperty": "",
+          "deleteRule": "",
+          "deletable": false,
+          "display": {
+            "inTable": false,
+            "inFilter": false,
+            "inForm": false,
+            "inDetail": false
+          },
+          "rules": [],
+          "generationRule": "auto",
+          "sequence": null,
+          "uuid": "162cd0f4ab204214993fdfd446cd13f0"
+        },
+        {
+          "concept": "EntityProperty",
+          "name": "updatedBy",
+          "columnName": "",
+          "label": "更新者",
+          "description": "更新者",
+          "typeAnnotation": {
+            "concept": "TypeAnnotation",
+            "typeKind": "primitive",
+            "typeNamespace": "nasl.core",
+            "typeName": "String"
+          },
+          "required": false,
+          "defaultValue": null,
+          "primaryKey": false,
+          "relationNamespace": "app.dataSources.defaultDS.entities",
+          "relationEntity": "",
+          "relationProperty": "",
+          "deleteRule": "",
+          "deletable": false,
+          "display": {
+            "inTable": false,
+            "inFilter": false,
+            "inForm": false,
+            "inDetail": false
+          },
+          "rules": [],
+          "generationRule": "auto",
+          "sequence": null,
+          "uuid": "4272863650564043829fc57560bde6f7"
+        },
+        {
+          "concept": "EntityProperty",
+          "name": "roleId",
+          "columnName": "",
+          "label": "角色唯一ID",
+          "description": "",
+          "typeAnnotation": {
+            "concept": "TypeAnnotation",
+            "typeKind": "primitive",
+            "typeNamespace": "nasl.core",
+            "typeName": "Long"
+          },
+          "required": true,
+          "defaultValue": null,
+          "primaryKey": false,
+          "relationNamespace": "app.dataSources.defaultDS.entities",
+          "relationEntity": "LCAPRole",
+          "relationProperty": "id",
+          "deleteRule": "cascade",
+          "deletable": false,
+          "display": {
+            "inTable": false,
+            "inFilter": false,
+            "inForm": false,
+            "inDetail": true
+          },
+          "rules": [],
+          "generationRule": "auto",
+          "sequence": null,
+          "uuid": "0377dbc302534bfca941e173105eebce"
+        },
+        {
+          "concept": "EntityProperty",
+          "name": "permissionId",
+          "columnName": "",
+          "label": "权限唯一ID",
+          "description": "",
+          "typeAnnotation": {
+            "concept": "TypeAnnotation",
+            "typeKind": "primitive",
+            "typeNamespace": "nasl.core",
+            "typeName": "Long"
+          },
+          "required": true,
+          "defaultValue": null,
+          "primaryKey": false,
+          "relationNamespace": "app.dataSources.defaultDS.entities",
+          "relationEntity": "LCAPPermission",
+          "relationProperty": "id",
+          "deleteRule": "cascade",
+          "deletable": false,
+          "display": {
+            "inTable": false,
+            "inFilter": false,
+            "inForm": false,
+            "inDetail": true
+          },
+          "rules": [],
+          "generationRule": "auto",
+          "sequence": null,
+          "uuid": "aa09586ca109456da327503562b98fe1"
+        }
+      ],
+      "indexes": []
+    },
+    {
+      "concept": "Entity",
+      "name": "LCAPPerResMapping",
+      "uuid": "d1d25874bfd84938b6d078cd4d9b1ca0",
+      "tableName": "LCAPPerResMapping_7b1497",
+      "description": "权限与资源的关联实体。一组权限会包含若干资源路径，权限对应角色。为角色绑定、移除资源需操作该表。",
+      "origin": "ide",
+      "properties": [
+        {
+          "concept": "EntityProperty",
+          "name": "id",
+          "columnName": "",
+          "label": "主键",
+          "description": "主键",
+          "typeAnnotation": {
+            "concept": "TypeAnnotation",
+            "typeKind": "primitive",
+            "typeNamespace": "nasl.core",
+            "typeName": "Long"
+          },
+          "required": false,
+          "defaultValue": null,
+          "primaryKey": true,
+          "relationNamespace": "app.dataSources.defaultDS.entities",
+          "relationEntity": "",
+          "relationProperty": "",
+          "deleteRule": "",
+          "deletable": false,
+          "display": {
+            "inTable": false,
+            "inFilter": false,
+            "inForm": false,
+            "inDetail": false
+          },
+          "rules": [],
+          "generationRule": "auto",
+          "sequence": null,
+          "uuid": "138be638c2bb42b4a3c1f7b086e5c036"
+        },
+        {
+          "concept": "EntityProperty",
+          "name": "createdTime",
+          "columnName": "",
+          "label": "创建时间",
+          "description": "创建时间",
+          "typeAnnotation": {
+            "concept": "TypeAnnotation",
+            "typeKind": "primitive",
+            "typeNamespace": "nasl.core",
+            "typeName": "DateTime"
+          },
+          "required": false,
+          "defaultValue": null,
+          "primaryKey": false,
+          "relationNamespace": "app.dataSources.defaultDS.entities",
+          "relationEntity": "",
+          "relationProperty": "",
+          "deleteRule": "",
+          "deletable": false,
+          "display": {
+            "inTable": true,
+            "inFilter": false,
+            "inForm": false,
+            "inDetail": false
+          },
+          "rules": [],
+          "generationRule": "auto",
+          "sequence": null,
+          "uuid": "ce384dd9675a45dfbc22f42ee5d89ad8"
+        },
+        {
+          "concept": "EntityProperty",
+          "name": "updatedTime",
+          "columnName": "",
+          "label": "更新时间",
+          "description": "更新时间",
+          "typeAnnotation": {
+            "concept": "TypeAnnotation",
+            "typeKind": "primitive",
+            "typeNamespace": "nasl.core",
+            "typeName": "DateTime"
+          },
+          "required": false,
+          "defaultValue": null,
+          "primaryKey": false,
+          "relationNamespace": "app.dataSources.defaultDS.entities",
+          "relationEntity": "",
+          "relationProperty": "",
+          "deleteRule": "",
+          "deletable": false,
+          "display": {
+            "inTable": true,
+            "inFilter": false,
+            "inForm": false,
+            "inDetail": false
+          },
+          "rules": [],
+          "generationRule": "auto",
+          "sequence": null,
+          "uuid": "8421052d6cf345729cff217c763c5e5a"
+        },
+        {
+          "concept": "EntityProperty",
+          "name": "createdBy",
+          "columnName": "",
+          "label": "创建者",
+          "description": "创建者",
+          "typeAnnotation": {
+            "concept": "TypeAnnotation",
+            "typeKind": "primitive",
+            "typeNamespace": "nasl.core",
+            "typeName": "String"
+          },
+          "required": false,
+          "defaultValue": null,
+          "primaryKey": false,
+          "relationNamespace": "app.dataSources.defaultDS.entities",
+          "relationEntity": "",
+          "relationProperty": "",
+          "deleteRule": "",
+          "deletable": false,
+          "display": {
+            "inTable": false,
+            "inFilter": false,
+            "inForm": false,
+            "inDetail": false
+          },
+          "rules": [],
+          "generationRule": "auto",
+          "sequence": null,
+          "uuid": "7d607f797ae2423092ce2afd2272d07a"
+        },
+        {
+          "concept": "EntityProperty",
+          "name": "updatedBy",
+          "columnName": "",
+          "label": "更新者",
+          "description": "更新者",
+          "typeAnnotation": {
+            "concept": "TypeAnnotation",
+            "typeKind": "primitive",
+            "typeNamespace": "nasl.core",
+            "typeName": "String"
+          },
+          "required": false,
+          "defaultValue": null,
+          "primaryKey": false,
+          "relationNamespace": "app.dataSources.defaultDS.entities",
+          "relationEntity": "",
+          "relationProperty": "",
+          "deleteRule": "",
+          "deletable": false,
+          "display": {
+            "inTable": false,
+            "inFilter": false,
+            "inForm": false,
+            "inDetail": false
+          },
+          "rules": [],
+          "generationRule": "auto",
+          "sequence": null,
+          "uuid": "ef754e8ac1de40f8b73ebe6be357872a"
+        },
+        {
+          "concept": "EntityProperty",
+          "name": "permissionId",
+          "columnName": "",
+          "label": "权限唯一ID",
+          "description": "",
+          "typeAnnotation": {
+            "concept": "TypeAnnotation",
+            "typeKind": "primitive",
+            "typeNamespace": "nasl.core",
+            "typeName": "Long"
+          },
+          "required": true,
+          "defaultValue": null,
+          "primaryKey": false,
+          "relationNamespace": "app.dataSources.defaultDS.entities",
+          "relationEntity": "LCAPPermission",
+          "relationProperty": "id",
+          "deleteRule": "cascade",
+          "deletable": false,
+          "display": {
+            "inTable": true,
+            "inFilter": true,
+            "inForm": true,
+            "inDetail": true
+          },
+          "rules": [],
+          "generationRule": "auto",
+          "sequence": null,
+          "uuid": "dc8516b8b76e4381a2bb2d61d302cf71"
+        },
+        {
+          "concept": "EntityProperty",
+          "name": "resourceId",
+          "columnName": "",
+          "label": "资源唯一ID",
+          "description": "",
+          "typeAnnotation": {
+            "concept": "TypeAnnotation",
+            "typeKind": "primitive",
+            "typeNamespace": "nasl.core",
+            "typeName": "Long"
+          },
+          "required": true,
+          "defaultValue": null,
+          "primaryKey": false,
+          "relationNamespace": "app.dataSources.defaultDS.entities",
+          "relationEntity": "LCAPResource",
+          "relationProperty": "id",
+          "deleteRule": "cascade",
+          "deletable": false,
+          "display": {
+            "inTable": true,
+            "inFilter": true,
+            "inForm": true,
+            "inDetail": true
+          },
+          "rules": [],
+          "generationRule": "auto",
+          "sequence": null,
+          "uuid": "8f2a0b88f01146b0891e8e6f05afe72d"
+        }
+      ],
+      "indexes": []
+    },
+    {
+      "concept": "Entity",
+      "name": "LCAPUserRoleMapping",
+      "uuid": "c1c1f88647de43a88805a1197234a7e3",
+      "tableName": "LCAPUserRoleMapping_7b1497",
+      "description": "用户与角色关联实体。操作该表可完成为角色添加成员、移除角色成员等。",
+      "origin": "ide",
+      "properties": [
+        {
+          "concept": "EntityProperty",
+          "name": "id",
+          "columnName": "",
+          "label": "主键",
+          "description": "主键",
+          "typeAnnotation": {
+            "concept": "TypeAnnotation",
+            "typeKind": "primitive",
+            "typeNamespace": "nasl.core",
+            "typeName": "Long"
+          },
+          "required": false,
+          "defaultValue": null,
+          "primaryKey": true,
+          "relationNamespace": "app.dataSources.defaultDS.entities",
+          "relationEntity": "",
+          "relationProperty": "",
+          "deleteRule": "",
+          "deletable": false,
+          "display": {
+            "inTable": false,
+            "inFilter": false,
+            "inForm": false,
+            "inDetail": false
+          },
+          "rules": [],
+          "generationRule": "auto",
+          "sequence": null,
+          "uuid": "d1457788be4048fd8b20d0c6d04cb5df"
+        },
+        {
+          "concept": "EntityProperty",
+          "name": "createdTime",
+          "columnName": "",
+          "label": "创建时间",
+          "description": "创建时间",
+          "typeAnnotation": {
+            "concept": "TypeAnnotation",
+            "typeKind": "primitive",
+            "typeNamespace": "nasl.core",
+            "typeName": "DateTime"
+          },
+          "required": false,
+          "defaultValue": null,
+          "primaryKey": false,
+          "relationNamespace": "app.dataSources.defaultDS.entities",
+          "relationEntity": "",
+          "relationProperty": "",
+          "deleteRule": "",
+          "deletable": false,
+          "display": {
+            "inTable": false,
+            "inFilter": false,
+            "inForm": false,
+            "inDetail": false
+          },
+          "rules": [],
+          "generationRule": "auto",
+          "sequence": null,
+          "uuid": "f6746fe0185145a8bc2b9df6c327f22f"
+        },
+        {
+          "concept": "EntityProperty",
+          "name": "updatedTime",
+          "columnName": "",
+          "label": "更新时间",
+          "description": "更新时间",
+          "typeAnnotation": {
+            "concept": "TypeAnnotation",
+            "typeKind": "primitive",
+            "typeNamespace": "nasl.core",
+            "typeName": "DateTime"
+          },
+          "required": false,
+          "defaultValue": null,
+          "primaryKey": false,
+          "relationNamespace": "app.dataSources.defaultDS.entities",
+          "relationEntity": "",
+          "relationProperty": "",
+          "deleteRule": "",
+          "deletable": false,
+          "display": {
+            "inTable": false,
+            "inFilter": false,
+            "inForm": false,
+            "inDetail": false
+          },
+          "rules": [],
+          "generationRule": "auto",
+          "sequence": null,
+          "uuid": "94003c07cb794e54a3f5fe45827dd24c"
+        },
+        {
+          "concept": "EntityProperty",
+          "name": "createdBy",
+          "columnName": "",
+          "label": "创建者",
+          "description": "创建者",
+          "typeAnnotation": {
+            "concept": "TypeAnnotation",
+            "typeKind": "primitive",
+            "typeNamespace": "nasl.core",
+            "typeName": "String"
+          },
+          "required": false,
+          "defaultValue": null,
+          "primaryKey": false,
+          "relationNamespace": "app.dataSources.defaultDS.entities",
+          "relationEntity": "",
+          "relationProperty": "",
+          "deleteRule": "",
+          "deletable": false,
+          "display": {
+            "inTable": false,
+            "inFilter": false,
+            "inForm": false,
+            "inDetail": false
+          },
+          "rules": [],
+          "generationRule": "auto",
+          "sequence": null,
+          "uuid": "30a7253a92f34dc48975843cd557d712"
+        },
+        {
+          "concept": "EntityProperty",
+          "name": "updatedBy",
+          "columnName": "",
+          "label": "更新者",
+          "description": "更新者",
+          "typeAnnotation": {
+            "concept": "TypeAnnotation",
+            "typeKind": "primitive",
+            "typeNamespace": "nasl.core",
+            "typeName": "String"
+          },
+          "required": false,
+          "defaultValue": null,
+          "primaryKey": false,
+          "relationNamespace": "app.dataSources.defaultDS.entities",
+          "relationEntity": "",
+          "relationProperty": "",
+          "deleteRule": "",
+          "deletable": false,
+          "display": {
+            "inTable": false,
+            "inFilter": false,
+            "inForm": false,
+            "inDetail": false
+          },
+          "rules": [],
+          "generationRule": "auto",
+          "sequence": null,
+          "uuid": "9f8ead2f160d4a698e4017d0e6f54f88"
+        },
+        {
+          "concept": "EntityProperty",
+          "name": "userId",
+          "columnName": "",
+          "label": "用户唯一ID",
+          "description": "",
+          "typeAnnotation": {
+            "concept": "TypeAnnotation",
+            "typeKind": "primitive",
+            "typeNamespace": "nasl.core",
+            "typeName": "String"
+          },
+          "required": true,
+          "defaultValue": null,
+          "primaryKey": false,
+          "relationNamespace": "app.dataSources.defaultDS.entities",
+          "relationEntity": "",
+          "relationProperty": "",
+          "deleteRule": "cascade",
+          "deletable": false,
+          "display": {
+            "inTable": false,
+            "inFilter": false,
+            "inForm": false,
+            "inDetail": false
+          },
+          "rules": [],
+          "generationRule": "auto",
+          "sequence": null,
+          "uuid": "2883227ab9194b7e8fcd89d5c3ff3b4f"
+        },
+        {
+          "concept": "EntityProperty",
+          "name": "roleId",
+          "columnName": "",
+          "label": "角色唯一ID",
+          "description": "",
+          "typeAnnotation": {
+            "concept": "TypeAnnotation",
+            "typeKind": "primitive",
+            "typeNamespace": "nasl.core",
+            "typeName": "Long"
+          },
+          "required": true,
+          "defaultValue": null,
+          "primaryKey": false,
+          "relationNamespace": "app.dataSources.defaultDS.entities",
+          "relationEntity": "LCAPRole",
+          "relationProperty": "id",
+          "deleteRule": "cascade",
+          "deletable": false,
+          "display": {
+            "inTable": false,
+            "inFilter": false,
+            "inForm": false,
+            "inDetail": false
+          },
+          "rules": [],
+          "generationRule": "auto",
+          "sequence": null,
+          "uuid": "535c3a89ec7246f3a73d026a4e8f8627"
+        },
+        {
+          "concept": "EntityProperty",
+          "name": "userName",
+          "columnName": "",
+          "label": "用户名",
+          "description": "",
+          "typeAnnotation": {
+            "concept": "TypeAnnotation",
+            "typeKind": "primitive",
+            "typeNamespace": "nasl.core",
+            "typeName": "String"
+          },
+          "required": false,
+          "defaultValue": null,
+          "primaryKey": false,
+          "relationNamespace": "app.dataSources.defaultDS.entities",
+          "relationEntity": "",
+          "relationProperty": "",
+          "deleteRule": "",
+          "deletable": false,
+          "display": {
+            "inTable": true,
+            "inFilter": true,
+            "inForm": true,
+            "inDetail": true
+          },
+          "rules": [],
+          "generationRule": "auto",
+          "sequence": null,
+          "uuid": "8114687a14a0436e9ef0c27646db10e0"
+        },
+        {
+          "concept": "EntityProperty",
+          "name": "source",
+          "columnName": "",
+          "label": "用户来源",
+          "description": "",
+          "typeAnnotation": {
+            "concept": "TypeAnnotation",
+            "typeKind": "primitive",
+            "typeNamespace": "nasl.core",
+            "typeName": "String"
+          },
+          "required": false,
+          "defaultValue": null,
+          "primaryKey": false,
+          "relationNamespace": "app.dataSources.defaultDS.entities",
+          "relationEntity": "",
+          "relationProperty": "",
+          "deleteRule": "",
+          "deletable": false,
+          "display": {
+            "inTable": true,
+            "inFilter": true,
+            "inForm": true,
+            "inDetail": true
+          },
+          "rules": [],
+          "generationRule": "auto",
+          "sequence": null,
+          "uuid": "448824bc3b1c451c9601ba1a30f3c23c"
+        }
+      ],
+      "indexes": []
+    },
+    {
+      "concept": "Entity",
+      "name": "LCAPRole",
+      "uuid": "955d6d9d77df4242963063a11421da1d",
+      "tableName": "LCAPRole_7b1497",
+      "description": "角色实体。角色与权限是关联的，新增角色要在权限实体和角色权限关联实体同步新增数据",
+      "origin": "ide",
+      "properties": [
+        {
+          "concept": "EntityProperty",
+          "name": "id",
+          "columnName": "",
+          "label": "主键",
+          "description": "主键",
+          "typeAnnotation": {
+            "concept": "TypeAnnotation",
+            "typeKind": "primitive",
+            "typeNamespace": "nasl.core",
+            "typeName": "Long"
+          },
+          "required": false,
+          "defaultValue": null,
+          "primaryKey": true,
+          "relationNamespace": "app.dataSources.defaultDS.entities",
+          "relationEntity": "",
+          "relationProperty": "",
+          "deleteRule": "",
+          "deletable": false,
+          "display": {
+            "inTable": false,
+            "inFilter": false,
+            "inForm": false,
+            "inDetail": false
+          },
+          "rules": [],
+          "generationRule": "auto",
+          "sequence": null,
+          "uuid": "74894d86e5c249bea41616964765eefe"
+        },
+        {
+          "concept": "EntityProperty",
+          "name": "createdTime",
+          "columnName": "",
+          "label": "创建时间",
+          "description": "创建时间",
+          "typeAnnotation": {
+            "concept": "TypeAnnotation",
+            "typeKind": "primitive",
+            "typeNamespace": "nasl.core",
+            "typeName": "DateTime"
+          },
+          "required": false,
+          "defaultValue": null,
+          "primaryKey": false,
+          "relationNamespace": "app.dataSources.defaultDS.entities",
+          "relationEntity": "",
+          "relationProperty": "",
+          "deleteRule": "",
+          "deletable": false,
+          "display": {
+            "inTable": false,
+            "inFilter": false,
+            "inForm": false,
+            "inDetail": false
+          },
+          "rules": [],
+          "generationRule": "auto",
+          "sequence": null,
+          "uuid": "954b8f172a534c17861a3b92f76dda2e"
+        },
+        {
+          "concept": "EntityProperty",
+          "name": "updatedTime",
+          "columnName": "",
+          "label": "更新时间",
+          "description": "更新时间",
+          "typeAnnotation": {
+            "concept": "TypeAnnotation",
+            "typeKind": "primitive",
+            "typeNamespace": "nasl.core",
+            "typeName": "DateTime"
+          },
+          "required": false,
+          "defaultValue": null,
+          "primaryKey": false,
+          "relationNamespace": "app.dataSources.defaultDS.entities",
+          "relationEntity": "",
+          "relationProperty": "",
+          "deleteRule": "",
+          "deletable": false,
+          "display": {
+            "inTable": false,
+            "inFilter": false,
+            "inForm": false,
+            "inDetail": false
+          },
+          "rules": [],
+          "generationRule": "auto",
+          "sequence": null,
+          "uuid": "032f1565257f4413bf5d42f6f444871e"
+        },
+        {
+          "concept": "EntityProperty",
+          "name": "createdBy",
+          "columnName": "",
+          "label": "创建者",
+          "description": "创建者",
+          "typeAnnotation": {
+            "concept": "TypeAnnotation",
+            "typeKind": "primitive",
+            "typeNamespace": "nasl.core",
+            "typeName": "String"
+          },
+          "required": false,
+          "defaultValue": null,
+          "primaryKey": false,
+          "relationNamespace": "app.dataSources.defaultDS.entities",
+          "relationEntity": "",
+          "relationProperty": "",
+          "deleteRule": "",
+          "deletable": false,
+          "display": {
+            "inTable": false,
+            "inFilter": false,
+            "inForm": false,
+            "inDetail": false
+          },
+          "rules": [],
+          "generationRule": "auto",
+          "sequence": null,
+          "uuid": "d2471b45d6c94fec82096f2ce3550d7f"
+        },
+        {
+          "concept": "EntityProperty",
+          "name": "updatedBy",
+          "columnName": "",
+          "label": "更新者",
+          "description": "更新者",
+          "typeAnnotation": {
+            "concept": "TypeAnnotation",
+            "typeKind": "primitive",
+            "typeNamespace": "nasl.core",
+            "typeName": "String"
+          },
+          "required": false,
+          "defaultValue": null,
+          "primaryKey": false,
+          "relationNamespace": "app.dataSources.defaultDS.entities",
+          "relationEntity": "",
+          "relationProperty": "",
+          "deleteRule": "",
+          "deletable": false,
+          "display": {
+            "inTable": false,
+            "inFilter": false,
+            "inForm": false,
+            "inDetail": false
+          },
+          "rules": [],
+          "generationRule": "auto",
+          "sequence": null,
+          "uuid": "d536070d9b2743daa2949eef9d738f4f"
+        },
+        {
+          "concept": "EntityProperty",
+          "name": "uuid",
+          "columnName": "",
+          "label": "唯一标识",
+          "description": "唯一标识",
+          "typeAnnotation": {
+            "concept": "TypeAnnotation",
+            "typeKind": "primitive",
+            "typeNamespace": "nasl.core",
+            "typeName": "String"
+          },
+          "required": false,
+          "defaultValue": null,
+          "primaryKey": false,
+          "relationNamespace": "app.dataSources.defaultDS.entities",
+          "relationEntity": "",
+          "relationProperty": "",
+          "deleteRule": "",
+          "deletable": false,
+          "display": {
+            "inTable": false,
+            "inFilter": false,
+            "inForm": false,
+            "inDetail": false
+          },
+          "rules": [],
+          "generationRule": "auto",
+          "sequence": null,
+          "uuid": "5940b53c40d74b15aee39299cbf6f18d"
+        },
+        {
+          "concept": "EntityProperty",
+          "name": "name",
+          "columnName": "",
+          "label": "角色名称",
+          "description": "角色名",
+          "typeAnnotation": {
+            "concept": "TypeAnnotation",
+            "typeKind": "primitive",
+            "typeNamespace": "nasl.core",
+            "typeName": "String"
+          },
+          "required": true,
+          "defaultValue": null,
+          "primaryKey": false,
+          "relationNamespace": "app.dataSources.defaultDS.entities",
+          "relationEntity": "",
+          "relationProperty": "",
+          "deleteRule": "",
+          "deletable": false,
+          "display": {
+            "inTable": true,
+            "inFilter": true,
+            "inForm": true,
+            "inDetail": true
+          },
+          "rules": [],
+          "generationRule": "auto",
+          "sequence": null,
+          "uuid": "dabb986160d0434f8d4fe8d9455d41b6"
+        },
+        {
+          "concept": "EntityProperty",
+          "name": "description",
+          "columnName": "",
+          "label": "角色描述",
+          "description": "",
+          "typeAnnotation": {
+            "concept": "TypeAnnotation",
+            "typeKind": "primitive",
+            "typeNamespace": "nasl.core",
+            "typeName": "String"
+          },
+          "required": false,
+          "defaultValue": null,
+          "primaryKey": false,
+          "relationNamespace": "app.dataSources.defaultDS.entities",
+          "relationEntity": "",
+          "relationProperty": "",
+          "deleteRule": "",
+          "deletable": false,
+          "display": {
+            "inTable": true,
+            "inFilter": false,
+            "inForm": true,
+            "inDetail": true
+          },
+          "rules": [],
+          "generationRule": "auto",
+          "sequence": null,
+          "uuid": "450e06858fe64f9ba9db769e93516f3f"
+        },
+        {
+          "concept": "EntityProperty",
+          "name": "roleStatus",
+          "columnName": "",
+          "label": "角色状态",
+          "description": "角色状态，可配置true启用，false禁用。",
+          "typeAnnotation": {
+            "concept": "TypeAnnotation",
+            "typeKind": "primitive",
+            "typeNamespace": "nasl.core",
+            "typeName": "Boolean"
+          },
+          "required": false,
+          "defaultValue": "true",
+          "primaryKey": false,
+          "relationNamespace": "app.dataSources.defaultDS.entities",
+          "relationEntity": "",
+          "relationProperty": "",
+          "deleteRule": "",
+          "deletable": false,
+          "display": {
+            "inTable": true,
+            "inFilter": true,
+            "inForm": true,
+            "inDetail": true
+          },
+          "rules": [],
+          "generationRule": "auto",
+          "sequence": null,
+          "uuid": "aa9ce15c43c84b68b03c881d1d0d2ea4"
+        },
+        {
+          "concept": "EntityProperty",
+          "name": "editable",
+          "columnName": "",
+          "label": "是否可编辑",
+          "description": "系统字段，请勿修改。web新增为可编辑true，ide新增为不可编辑false。",
+          "typeAnnotation": {
+            "concept": "TypeAnnotation",
+            "typeKind": "primitive",
+            "typeNamespace": "nasl.core",
+            "typeName": "Boolean"
+          },
+          "required": false,
+          "defaultValue": "true",
+          "primaryKey": false,
+          "relationNamespace": "app.dataSources.defaultDS.entities",
+          "relationEntity": "",
+          "relationProperty": "",
+          "deleteRule": "",
+          "deletable": false,
+          "display": {
+            "inTable": true,
+            "inFilter": true,
+            "inForm": true,
+            "inDetail": true
+          },
+          "rules": [],
+          "generationRule": "auto",
+          "sequence": null,
+          "uuid": "168da00defda4c21a7f23f196d4b362b"
+        }
+      ],
+      "indexes": []
+    },
+    {
+      "concept": "Entity",
+      "name": "LCAPPermission",
+      "uuid": "c0e6beb152484fcb9cdc710e3e42cf46",
+      "tableName": "LCAPPermission_7b1497",
+      "description": "权限实体。新增一个角色要默认生成一个权限和角色权限对应关系",
+      "origin": "ide",
+      "properties": [
+        {
+          "concept": "EntityProperty",
+          "name": "id",
+          "columnName": "",
+          "label": "主键",
+          "description": "主键",
+          "typeAnnotation": {
+            "concept": "TypeAnnotation",
+            "typeKind": "primitive",
+            "typeNamespace": "nasl.core",
+            "typeName": "Long"
+          },
+          "required": false,
+          "defaultValue": null,
+          "primaryKey": true,
+          "relationNamespace": "app.dataSources.defaultDS.entities",
+          "relationEntity": "",
+          "relationProperty": "",
+          "deleteRule": "",
+          "deletable": false,
+          "display": {
+            "inTable": false,
+            "inFilter": false,
+            "inForm": false,
+            "inDetail": false
+          },
+          "rules": [],
+          "generationRule": "auto",
+          "sequence": null,
+          "uuid": "e3aa56c2f9cb47bab4b697bc2bf50dc9"
+        },
+        {
+          "concept": "EntityProperty",
+          "name": "createdTime",
+          "columnName": "",
+          "label": "创建时间",
+          "description": "创建时间",
+          "typeAnnotation": {
+            "concept": "TypeAnnotation",
+            "typeKind": "primitive",
+            "typeNamespace": "nasl.core",
+            "typeName": "DateTime"
+          },
+          "required": false,
+          "defaultValue": null,
+          "primaryKey": false,
+          "relationNamespace": "app.dataSources.defaultDS.entities",
+          "relationEntity": "",
+          "relationProperty": "",
+          "deleteRule": "",
+          "deletable": false,
+          "display": {
+            "inTable": false,
+            "inFilter": false,
+            "inForm": false,
+            "inDetail": false
+          },
+          "rules": [],
+          "generationRule": "auto",
+          "sequence": null,
+          "uuid": "8b1c99fc6a7b4682b5d38df658554ac5"
+        },
+        {
+          "concept": "EntityProperty",
+          "name": "updatedTime",
+          "columnName": "",
+          "label": "更新时间",
+          "description": "更新时间",
+          "typeAnnotation": {
+            "concept": "TypeAnnotation",
+            "typeKind": "primitive",
+            "typeNamespace": "nasl.core",
+            "typeName": "DateTime"
+          },
+          "required": false,
+          "defaultValue": null,
+          "primaryKey": false,
+          "relationNamespace": "app.dataSources.defaultDS.entities",
+          "relationEntity": "",
+          "relationProperty": "",
+          "deleteRule": "",
+          "deletable": false,
+          "display": {
+            "inTable": false,
+            "inFilter": false,
+            "inForm": false,
+            "inDetail": false
+          },
+          "rules": [],
+          "generationRule": "auto",
+          "sequence": null,
+          "uuid": "1cf9dc8cd4a24aa2b618acc0a9d7f0f3"
+        },
+        {
+          "concept": "EntityProperty",
+          "name": "createdBy",
+          "columnName": "",
+          "label": "创建者",
+          "description": "创建者",
+          "typeAnnotation": {
+            "concept": "TypeAnnotation",
+            "typeKind": "primitive",
+            "typeNamespace": "nasl.core",
+            "typeName": "String"
+          },
+          "required": false,
+          "defaultValue": null,
+          "primaryKey": false,
+          "relationNamespace": "app.dataSources.defaultDS.entities",
+          "relationEntity": "",
+          "relationProperty": "",
+          "deleteRule": "",
+          "deletable": false,
+          "display": {
+            "inTable": false,
+            "inFilter": false,
+            "inForm": false,
+            "inDetail": false
+          },
+          "rules": [],
+          "generationRule": "auto",
+          "sequence": null,
+          "uuid": "3b8f04c7b6a64450a2fae38c6a65b4ec"
+        },
+        {
+          "concept": "EntityProperty",
+          "name": "updatedBy",
+          "columnName": "",
+          "label": "更新者",
+          "description": "更新者",
+          "typeAnnotation": {
+            "concept": "TypeAnnotation",
+            "typeKind": "primitive",
+            "typeNamespace": "nasl.core",
+            "typeName": "String"
+          },
+          "required": false,
+          "defaultValue": null,
+          "primaryKey": false,
+          "relationNamespace": "app.dataSources.defaultDS.entities",
+          "relationEntity": "",
+          "relationProperty": "",
+          "deleteRule": "",
+          "deletable": false,
+          "display": {
+            "inTable": false,
+            "inFilter": false,
+            "inForm": false,
+            "inDetail": false
+          },
+          "rules": [],
+          "generationRule": "auto",
+          "sequence": null,
+          "uuid": "16e9bcab93a041e1ace40a205114e9c2"
+        },
+        {
+          "concept": "EntityProperty",
+          "name": "uuid",
+          "columnName": "",
+          "label": "唯一标识",
+          "description": "唯一标识",
+          "typeAnnotation": {
+            "concept": "TypeAnnotation",
+            "typeKind": "primitive",
+            "typeNamespace": "nasl.core",
+            "typeName": "String"
+          },
+          "required": false,
+          "defaultValue": null,
+          "primaryKey": false,
+          "relationNamespace": "app.dataSources.defaultDS.entities",
+          "relationEntity": "",
+          "relationProperty": "",
+          "deleteRule": "",
+          "deletable": false,
+          "display": {
+            "inTable": false,
+            "inFilter": false,
+            "inForm": false,
+            "inDetail": false
+          },
+          "rules": [],
+          "generationRule": "auto",
+          "sequence": null,
+          "uuid": "f629ad0a9449430f8938c5e7ed2775af"
+        },
+        {
+          "concept": "EntityProperty",
+          "name": "name",
+          "columnName": "",
+          "label": "权限名称",
+          "description": "",
+          "typeAnnotation": {
+            "concept": "TypeAnnotation",
+            "typeKind": "primitive",
+            "typeNamespace": "nasl.core",
+            "typeName": "String"
+          },
+          "required": true,
+          "defaultValue": null,
+          "primaryKey": false,
+          "relationNamespace": "app.dataSources.defaultDS.entities",
+          "relationEntity": "",
+          "relationProperty": "",
+          "deleteRule": "",
+          "deletable": false,
+          "display": {
+            "inTable": true,
+            "inFilter": true,
+            "inForm": true,
+            "inDetail": true
+          },
+          "rules": [],
+          "generationRule": "auto",
+          "sequence": null,
+          "uuid": "e7853227203249d1a5d9dc87c14a37a7"
+        },
+        {
+          "concept": "EntityProperty",
+          "name": "description",
+          "columnName": "",
+          "label": "权限描述",
+          "description": "",
+          "typeAnnotation": {
+            "concept": "TypeAnnotation",
+            "typeKind": "primitive",
+            "typeNamespace": "nasl.core",
+            "typeName": "String"
+          },
+          "required": false,
+          "defaultValue": null,
+          "primaryKey": false,
+          "relationNamespace": "app.dataSources.defaultDS.entities",
+          "relationEntity": "",
+          "relationProperty": "",
+          "deleteRule": "",
+          "deletable": false,
+          "display": {
+            "inTable": false,
+            "inFilter": false,
+            "inForm": true,
+            "inDetail": true
+          },
+          "rules": [],
+          "generationRule": "auto",
+          "sequence": null,
+          "uuid": "d7db0c7f0f1840768db3b5d3b01dd1ae"
+        }
+      ],
+      "indexes": []
+    },
+    {
+      "concept": "Entity",
+      "name": "LCAPResource",
+      "uuid": "0e7ae5445dd0445eb9aca83a55e88935",
+      "tableName": "LCAPResource_7b1497",
+      "description": "资源实体。该表的数据是新建组件后，系统自动上报的。name字段对应资源路径",
+      "origin": "ide",
+      "properties": [
+        {
+          "concept": "EntityProperty",
+          "name": "id",
+          "columnName": "",
+          "label": "主键",
+          "description": "主键",
+          "typeAnnotation": {
+            "concept": "TypeAnnotation",
+            "typeKind": "primitive",
+            "typeNamespace": "nasl.core",
+            "typeName": "Long"
+          },
+          "required": false,
+          "defaultValue": null,
+          "primaryKey": true,
+          "relationNamespace": "app.dataSources.defaultDS.entities",
+          "relationEntity": "",
+          "relationProperty": "",
+          "deleteRule": "",
+          "deletable": false,
+          "display": {
+            "inTable": false,
+            "inFilter": false,
+            "inForm": false,
+            "inDetail": false
+          },
+          "rules": [],
+          "generationRule": "auto",
+          "sequence": null,
+          "uuid": "b88fa60caeaa4475b0d9781b24350e3a"
+        },
+        {
+          "concept": "EntityProperty",
+          "name": "createdTime",
+          "columnName": "",
+          "label": "创建时间",
+          "description": "创建时间",
+          "typeAnnotation": {
+            "concept": "TypeAnnotation",
+            "typeKind": "primitive",
+            "typeNamespace": "nasl.core",
+            "typeName": "DateTime"
+          },
+          "required": false,
+          "defaultValue": null,
+          "primaryKey": false,
+          "relationNamespace": "app.dataSources.defaultDS.entities",
+          "relationEntity": "",
+          "relationProperty": "",
+          "deleteRule": "",
+          "deletable": false,
+          "display": {
+            "inTable": false,
+            "inFilter": false,
+            "inForm": false,
+            "inDetail": false
+          },
+          "rules": [],
+          "generationRule": "auto",
+          "sequence": null,
+          "uuid": "03ecd08e129d4ac1a730cf12d1b081b1"
+        },
+        {
+          "concept": "EntityProperty",
+          "name": "updatedTime",
+          "columnName": "",
+          "label": "更新时间",
+          "description": "更新时间",
+          "typeAnnotation": {
+            "concept": "TypeAnnotation",
+            "typeKind": "primitive",
+            "typeNamespace": "nasl.core",
+            "typeName": "DateTime"
+          },
+          "required": false,
+          "defaultValue": null,
+          "primaryKey": false,
+          "relationNamespace": "app.dataSources.defaultDS.entities",
+          "relationEntity": "",
+          "relationProperty": "",
+          "deleteRule": "",
+          "deletable": false,
+          "display": {
+            "inTable": false,
+            "inFilter": false,
+            "inForm": false,
+            "inDetail": false
+          },
+          "rules": [],
+          "generationRule": "auto",
+          "sequence": null,
+          "uuid": "2c4131fd76d94ec0911ed9c153731fd0"
+        },
+        {
+          "concept": "EntityProperty",
+          "name": "createdBy",
+          "columnName": "",
+          "label": "创建者",
+          "description": "创建者",
+          "typeAnnotation": {
+            "concept": "TypeAnnotation",
+            "typeKind": "primitive",
+            "typeNamespace": "nasl.core",
+            "typeName": "String"
+          },
+          "required": false,
+          "defaultValue": null,
+          "primaryKey": false,
+          "relationNamespace": "app.dataSources.defaultDS.entities",
+          "relationEntity": "",
+          "relationProperty": "",
+          "deleteRule": "",
+          "deletable": false,
+          "display": {
+            "inTable": false,
+            "inFilter": false,
+            "inForm": false,
+            "inDetail": false
+          },
+          "rules": [],
+          "generationRule": "auto",
+          "sequence": null,
+          "uuid": "843b0051fd674befaa63b5481916fd13"
+        },
+        {
+          "concept": "EntityProperty",
+          "name": "updatedBy",
+          "columnName": "",
+          "label": "更新者",
+          "description": "更新者",
+          "typeAnnotation": {
+            "concept": "TypeAnnotation",
+            "typeKind": "primitive",
+            "typeNamespace": "nasl.core",
+            "typeName": "String"
+          },
+          "required": false,
+          "defaultValue": null,
+          "primaryKey": false,
+          "relationNamespace": "app.dataSources.defaultDS.entities",
+          "relationEntity": "",
+          "relationProperty": "",
+          "deleteRule": "",
+          "deletable": false,
+          "display": {
+            "inTable": false,
+            "inFilter": false,
+            "inForm": false,
+            "inDetail": false
+          },
+          "rules": [],
+          "generationRule": "auto",
+          "sequence": null,
+          "uuid": "353f9b5cfb894b5592489d45f6023462"
+        },
+        {
+          "concept": "EntityProperty",
+          "name": "uuid",
+          "columnName": "",
+          "label": "唯一标识",
+          "description": "唯一标识",
+          "typeAnnotation": {
+            "concept": "TypeAnnotation",
+            "typeKind": "primitive",
+            "typeNamespace": "nasl.core",
+            "typeName": "String"
+          },
+          "required": false,
+          "defaultValue": null,
+          "primaryKey": false,
+          "relationNamespace": "app.dataSources.defaultDS.entities",
+          "relationEntity": "",
+          "relationProperty": "",
+          "deleteRule": "",
+          "deletable": false,
+          "display": {
+            "inTable": false,
+            "inFilter": false,
+            "inForm": false,
+            "inDetail": false
+          },
+          "rules": [],
+          "generationRule": "auto",
+          "sequence": null,
+          "uuid": "38cff931da314dd1bcbe860f4abdd8a8"
+        },
+        {
+          "concept": "EntityProperty",
+          "name": "name",
+          "columnName": "",
+          "label": "资源名称",
+          "description": "资源路径，如/test/api",
+          "typeAnnotation": {
+            "concept": "TypeAnnotation",
+            "typeKind": "primitive",
+            "typeNamespace": "nasl.core",
+            "typeName": "String"
+          },
+          "required": true,
+          "defaultValue": null,
+          "primaryKey": false,
+          "relationNamespace": "app.dataSources.defaultDS.entities",
+          "relationEntity": "",
+          "relationProperty": "",
+          "deleteRule": "",
+          "deletable": false,
+          "display": {
+            "inTable": true,
+            "inFilter": true,
+            "inForm": true,
+            "inDetail": true
+          },
+          "rules": [],
+          "generationRule": "auto",
+          "sequence": null,
+          "uuid": "bcabc0c3b7bc46c5803ddd2891cf9bf5"
+        },
+        {
+          "concept": "EntityProperty",
+          "name": "description",
+          "columnName": "",
+          "label": "资源描述",
+          "description": "",
+          "typeAnnotation": {
+            "concept": "TypeAnnotation",
+            "typeKind": "primitive",
+            "typeNamespace": "nasl.core",
+            "typeName": "String"
+          },
+          "required": false,
+          "defaultValue": null,
+          "primaryKey": false,
+          "relationNamespace": "app.dataSources.defaultDS.entities",
+          "relationEntity": "",
+          "relationProperty": "",
+          "deleteRule": "",
+          "deletable": false,
+          "display": {
+            "inTable": true,
+            "inFilter": true,
+            "inForm": true,
+            "inDetail": true
+          },
+          "rules": [],
+          "generationRule": "auto",
+          "sequence": null,
+          "uuid": "38aeb2467ceb440cadd517328335029c"
+        },
+        {
+          "concept": "EntityProperty",
+          "name": "type",
+          "columnName": "",
+          "label": "资源类型",
+          "description": "",
+          "typeAnnotation": {
+            "concept": "TypeAnnotation",
+            "typeKind": "primitive",
+            "typeNamespace": "nasl.core",
+            "typeName": "String"
+          },
+          "required": false,
+          "defaultValue": null,
+          "primaryKey": false,
+          "relationNamespace": "app.dataSources.defaultDS.entities",
+          "relationEntity": "",
+          "relationProperty": "",
+          "deleteRule": "",
+          "deletable": false,
+          "display": {
+            "inTable": false,
+            "inFilter": false,
+            "inForm": false,
+            "inDetail": false
+          },
+          "rules": [],
+          "generationRule": "auto",
+          "sequence": null,
+          "uuid": "f5091d033cbd48cc83d96c75e2d11cfd"
+        }
+      ],
+      "indexes": []
+    }
+  ],
+  "success": true
+}

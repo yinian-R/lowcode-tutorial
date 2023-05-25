@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.lowcodesample.meta.mapper.SchemaIndexesMapper">
+    
+    <resultMap id="indexesMap" type="com.example.lowcodesample.core.lowcode.Entity$Index">
+        <result property="name" column="name" />
+        <result property="propertyNames" column="property_names" typeHandler="com.example.lowcodesample.core.mybatis.ListStringTypeHandler"/>
+        <result property="unique" column="unique" />
+        <result property="description" column="description" />
+    </resultMap>
+    
+    <select id="findList" resultMap="indexesMap">
+        select *
+        from schema_indexes
+        where relation_entity_id = #{relationEntityId}
+    </select>
+
+</mapper>
