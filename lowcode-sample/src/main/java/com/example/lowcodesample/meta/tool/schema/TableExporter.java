@@ -3,6 +3,9 @@ package com.example.lowcodesample.meta.tool.schema;
 import com.example.lowcodesample.core.lowcode.Entity;
 import com.example.lowcodesample.core.lowcode.MysqlDialect;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class TableExporter {
     
     private MysqlDialect dialect;
@@ -55,10 +58,18 @@ public class TableExporter {
             buf.append(", ")
                     .append(dialect.sqlConstraintString(table.getProperties()));
         }
+    
+        buf.append(")");
+    
+        if ( table.getDescription() != null ) {
+            buf.append( dialect.getTableComment( table.getDescription() ) );
+        }
         
+        List<String> sqlList = new ArrayList<>();
+        sqlList.add(buf.toString());
         
-        System.out.println(buf.toString());
-        return null;
+        // todo add Indexes
+        return sqlList.toArray(new String[0]);
     }
     
 }

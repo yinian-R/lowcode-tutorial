@@ -1,4 +1,4 @@
-package com.example.lowcodesample.meta;
+package com.example.lowcodesample.meta.hibernate;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;

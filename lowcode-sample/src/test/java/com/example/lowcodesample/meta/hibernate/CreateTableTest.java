@@ -1,4 +1,4 @@
-package com.example.lowcodesample.meta;
+package com.example.lowcodesample.meta.hibernate;
 
 import org.hibernate.boot.Metadata;
 import org.hibernate.boot.MetadataSources;
