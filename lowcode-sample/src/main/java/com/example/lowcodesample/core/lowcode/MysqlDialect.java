@@ -1,8 +1,11 @@
 package com.example.lowcodesample.core.lowcode;
 
+import cn.hutool.core.util.StrUtil;
+
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 public class MysqlDialect {
     
@@ -13,10 +16,13 @@ public class MysqlDialect {
         registerColumnType(TypePrimitive.BOOLEAN, "bit");
         registerColumnType(TypePrimitive.INTEGER, "integer");
         registerColumnType(TypePrimitive.DOUBLE, "double precision");
-        registerColumnType(TypePrimitive.DECIMAL, "decimal($p,$s)");
-        registerColumnType(TypePrimitive.STRING, "varchar($c)");
+        //registerColumnType(TypePrimitive.DECIMAL, "decimal($p,$s)");
+        registerColumnType(TypePrimitive.DECIMAL, "decimal(10,2)");
+        //registerColumnType(TypePrimitive.STRING, "varchar($c)");
+        registerColumnType(TypePrimitive.STRING, "varchar(100)");
         registerColumnType(TypePrimitive.TEXT, "text");
-        registerColumnType(TypePrimitive.BINARY, "binary($l)");
+        //registerColumnType(TypePrimitive.BINARY, "binary($l)");
+        registerColumnType(TypePrimitive.BINARY, "binary(1000)");
         registerColumnType(TypePrimitive.DATE, "date");
         registerColumnType(TypePrimitive.TIME, "time");
         registerColumnType(TypePrimitive.DATETIME, "datetime");
@@ -48,11 +54,11 @@ public class MysqlDialect {
     }
     
     public char openQuote() {
-        return '"';
+        return '`';
     }
     
     public char closeQuote() {
-        return '"';
+        return '`';
     }
     
     public String getSqlType(Entity.TypeAnnotation typeAnnotation, MysqlDialect dialect) {
@@ -67,13 +73,15 @@ public class MysqlDialect {
     public String sqlConstraintString(List<Entity.Properties> properties) {
         StringBuilder buf = new StringBuilder("primary key (");
     
-        for (Entity.Properties property : properties) {
-            if (property.isPrimaryKey()) {
-                buf.append(getQuotedName(property.getName()));
-                buf.append(", ");
-            }
-        }
-
+        String indexNames = properties.stream()
+                .filter(Entity.Properties::isPrimaryKey)
+                .map(item -> getQuotedName(item.getName()))
+                .collect(Collectors.joining(StrUtil.COMMA));
+        buf.append(indexNames);
         return buf.append(')').toString();
+    }
+    
+    public String getTableComment(String comment) {
+        return " comment='" + comment + "'";
     }
 }

@@ -55,7 +55,12 @@ public class TableExporter {
             buf.append(", ")
                     .append(dialect.sqlConstraintString(table.getProperties()));
         }
-        
+    
+        buf.append(")");
+    
+        if ( table.getDescription() != null ) {
+            buf.append( dialect.getTableComment( table.getDescription() ) );
+        }
         
         System.out.println(buf.toString());
         return null;
